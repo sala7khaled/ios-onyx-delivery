@@ -37,6 +37,12 @@
 		88CE07CD2A8B7BE900243F48 /* ReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07CC2A8B7BE900243F48 /* ReachabilityManager.swift */; };
 		88CE07CF2A8B7C0100243F48 /* Console.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07CE2A8B7C0100243F48 /* Console.swift */; };
 		88CE07D12A8B7D5A00243F48 /* Fail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07D02A8B7D5A00243F48 /* Fail.swift */; };
+		88CE07D52A8B83EC00243F48 /* AppButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07D42A8B83EC00243F48 /* AppButton.swift */; };
+		88CE07D72A8B83FB00243F48 /* LoadingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07D62A8B83FB00243F48 /* LoadingButton.swift */; };
+		88CE07DA2A8B847300243F48 /* AppTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07D92A8B847300243F48 /* AppTextField.swift */; };
+		88CE07DD2A8B855200243F48 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07DC2A8B855200243F48 /* UIButton+Extensions.swift */; };
+		88CE07E02A8B8A3B00243F48 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07DF2A8B8A3B00243F48 /* UIViewController+Extensions.swift */; };
+		88CE07E32A8B8A6900243F48 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07E22A8B8A6900243F48 /* AlertController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +78,12 @@
 		88CE07CC2A8B7BE900243F48 /* ReachabilityManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityManager.swift; sourceTree = "<group>"; };
 		88CE07CE2A8B7C0100243F48 /* Console.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Console.swift; sourceTree = "<group>"; };
 		88CE07D02A8B7D5A00243F48 /* Fail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fail.swift; sourceTree = "<group>"; };
+		88CE07D42A8B83EC00243F48 /* AppButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppButton.swift; sourceTree = "<group>"; };
+		88CE07D62A8B83FB00243F48 /* LoadingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingButton.swift; sourceTree = "<group>"; };
+		88CE07D92A8B847300243F48 /* AppTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTextField.swift; sourceTree = "<group>"; };
+		88CE07DC2A8B855200243F48 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
+		88CE07DF2A8B8A3B00243F48 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
+		88CE07E22A8B8A6900243F48 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -211,6 +223,8 @@
 			isa = PBXGroup;
 			children = (
 				88CE07942A8B630400243F48 /* UIColor */,
+				88CE07DB2A8B854600243F48 /* UIButton */,
+				88CE07DE2A8B8A2A00243F48 /* UIViewController */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -228,6 +242,9 @@
 		88CE07892A8B616A00243F48 /* Reuseable */ = {
 			isa = PBXGroup;
 			children = (
+				88CE07D32A8B83E200243F48 /* UIButton */,
+				88CE07D82A8B846200243F48 /* UITextField */,
+				88CE07E12A8B8A5B00243F48 /* AlertController */,
 			);
 			path = Reuseable;
 			sourceTree = "<group>";
@@ -347,6 +364,47 @@
 			path = Api;
 			sourceTree = "<group>";
 		};
+		88CE07D32A8B83E200243F48 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				88CE07D42A8B83EC00243F48 /* AppButton.swift */,
+				88CE07D62A8B83FB00243F48 /* LoadingButton.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		88CE07D82A8B846200243F48 /* UITextField */ = {
+			isa = PBXGroup;
+			children = (
+				88CE07D92A8B847300243F48 /* AppTextField.swift */,
+			);
+			path = UITextField;
+			sourceTree = "<group>";
+		};
+		88CE07DB2A8B854600243F48 /* UIButton */ = {
+			isa = PBXGroup;
+			children = (
+				88CE07DC2A8B855200243F48 /* UIButton+Extensions.swift */,
+			);
+			path = UIButton;
+			sourceTree = "<group>";
+		};
+		88CE07DE2A8B8A2A00243F48 /* UIViewController */ = {
+			isa = PBXGroup;
+			children = (
+				88CE07DF2A8B8A3B00243F48 /* UIViewController+Extensions.swift */,
+			);
+			path = UIViewController;
+			sourceTree = "<group>";
+		};
+		88CE07E12A8B8A5B00243F48 /* AlertController */ = {
+			isa = PBXGroup;
+			children = (
+				88CE07E22A8B8A6900243F48 /* AlertController.swift */,
+			);
+			path = AlertController;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -423,14 +481,19 @@
 				88CE078F2A8B624800243F48 /* RootRouter.swift in Sources */,
 				88CE07A82A8B6D7800243F48 /* Validator.swift in Sources */,
 				88CE07BE2A8B72DE00243F48 /* Codable+Extensions.swift in Sources */,
+				88CE07E02A8B8A3B00243F48 /* UIViewController+Extensions.swift in Sources */,
 				88CE07A32A8B6B5E00243F48 /* SignInViewModel.swift in Sources */,
 				88CE07CB2A8B7B7000243F48 /* URLSessionProvider.swift in Sources */,
 				88CE07C22A8B732300243F48 /* Response.swift in Sources */,
 				88CE07C72A8B7B5A00243F48 /* URLSessionContract.swift in Sources */,
+				88CE07D72A8B83FB00243F48 /* LoadingButton.swift in Sources */,
 				88CE07B22A8B714100243F48 /* HTTPMethod.swift in Sources */,
 				88CE07C42A8B7AE100243F48 /* AuthService.swift in Sources */,
+				88CE07E32A8B8A6900243F48 /* AlertController.swift in Sources */,
 				88CE07B82A8B716300243F48 /* ServiceProtocol.swift in Sources */,
 				88CE07CF2A8B7C0100243F48 /* Console.swift in Sources */,
+				88CE07DD2A8B855200243F48 /* UIButton+Extensions.swift in Sources */,
+				88CE07D52A8B83EC00243F48 /* AppButton.swift in Sources */,
 				88CE07692A8B5F5400243F48 /* AppDelegate.swift in Sources */,
 				88CE07D12A8B7D5A00243F48 /* Fail.swift in Sources */,
 				88CE07962A8B631300243F48 /* UIColor+Extensions.swift in Sources */,
@@ -445,6 +508,7 @@
 				88CE07B62A8B715900243F48 /* APIHeader.swift in Sources */,
 				88CE07A62A8B6B8700243F48 /* SignInForm.swift in Sources */,
 				88CE07C02A8B731200243F48 /* APIError.swift in Sources */,
+				88CE07DA2A8B847300243F48 /* AppTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -589,7 +653,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Onyx Delivery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -621,7 +684,6 @@
 				INFOPLIST_KEY_CFBundleDisplayName = "Onyx Delivery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				LD_RUNPATH_SEARCH_PATHS = (

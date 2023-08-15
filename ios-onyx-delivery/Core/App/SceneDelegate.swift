@@ -18,7 +18,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.tintColor = .primary
-//        RootRouter.presentRootScreen(in: window, vc: SplashController())
+        RootRouter.presentRootScreen(in: window, vc: SignInController())
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {

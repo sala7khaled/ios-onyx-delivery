@@ -12,7 +12,7 @@ enum Constants {
     static let defaultCountryCode = "+20"
     static let appName = "Onyx Delivery"
     static let invalidCredentials = "Invalid inputs, please check username, password and try again"
-    static let buttonCornerRadius: CGFloat = 26
+    static let defaultCornerRadius: CGFloat = 22
     static let defaultLanguageNumber: Int = 2
     
     
@@ -24,4 +24,13 @@ enum Constants {
     static let serverErrorResponse = "Server error!"
     static let parsingErrorResponse = "Parsing error!"
     static let sessionExpiredResponse = "Session expired!"
+    
+}
+
+
+// MARK: - IMAGES
+
+enum Images {
+    static let invisible = "ic-password-invisible"
+    static let visible = "ic-password-visible"
 }
