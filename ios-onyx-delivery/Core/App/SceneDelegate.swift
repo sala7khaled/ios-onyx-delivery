@@ -50,6 +50,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func sessionExpired() {
         RootRouter.presentRootScreen(in: window, vc: SignInController())
+        
+        // clearing user defaults after session expired
         userDefaults.removeObject(forKey: Constants.userInfoKey)
         userDefaults.synchronize()
     }
