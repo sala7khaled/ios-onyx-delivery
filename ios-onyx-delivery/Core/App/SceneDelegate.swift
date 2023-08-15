@@ -50,5 +50,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     func sessionExpired() {
         RootRouter.presentRootScreen(in: window, vc: SignInController())
+        userDefaults.removeObject(forKey: Constants.userInfoKey)
+        userDefaults.synchronize()
     }
 }
