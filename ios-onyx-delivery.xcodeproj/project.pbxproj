@@ -43,6 +43,9 @@
 		88CE07DD2A8B855200243F48 /* UIButton+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07DC2A8B855200243F48 /* UIButton+Extensions.swift */; };
 		88CE07E02A8B8A3B00243F48 /* UIViewController+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07DF2A8B8A3B00243F48 /* UIViewController+Extensions.swift */; };
 		88CE07E32A8B8A6900243F48 /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07E22A8B8A6900243F48 /* AlertController.swift */; };
+		88CE07E52A8B913200243F48 /* AuthRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07E42A8B913200243F48 /* AuthRepo.swift */; };
+		88CE07E72A8B914100243F48 /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07E62A8B914100243F48 /* Repo.swift */; };
+		88CE07E92A8B953400243F48 /* SignInResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07E82A8B953400243F48 /* SignInResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -84,6 +87,9 @@
 		88CE07DC2A8B855200243F48 /* UIButton+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Extensions.swift"; sourceTree = "<group>"; };
 		88CE07DF2A8B8A3B00243F48 /* UIViewController+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+Extensions.swift"; sourceTree = "<group>"; };
 		88CE07E22A8B8A6900243F48 /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		88CE07E42A8B913200243F48 /* AuthRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepo.swift; sourceTree = "<group>"; };
+		88CE07E62A8B914100243F48 /* Repo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Repo.swift; sourceTree = "<group>"; };
+		88CE07E82A8B953400243F48 /* SignInResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInResponse.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -208,6 +214,8 @@
 		88CE07852A8B60E900243F48 /* Repo */ = {
 			isa = PBXGroup;
 			children = (
+				88CE07E62A8B914100243F48 /* Repo.swift */,
+				88CE07E42A8B913200243F48 /* AuthRepo.swift */,
 			);
 			path = Repo;
 			sourceTree = "<group>";
@@ -278,6 +286,7 @@
 		88CE079B2A8B669800243F48 /* Order */ = {
 			isa = PBXGroup;
 			children = (
+				88CE07EA2A8B995600243F48 /* Model */,
 			);
 			path = Order;
 			sourceTree = "<group>";
@@ -303,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				88CE07A52A8B6B8700243F48 /* SignInForm.swift */,
+				88CE07E82A8B953400243F48 /* SignInResponse.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -405,6 +415,13 @@
 			path = AlertController;
 			sourceTree = "<group>";
 		};
+		88CE07EA2A8B995600243F48 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -477,8 +494,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88CE07E52A8B913200243F48 /* AuthRepo.swift in Sources */,
 				88CE07B42A8B714A00243F48 /* APIData.swift in Sources */,
 				88CE078F2A8B624800243F48 /* RootRouter.swift in Sources */,
+				88CE07E92A8B953400243F48 /* SignInResponse.swift in Sources */,
 				88CE07A82A8B6D7800243F48 /* Validator.swift in Sources */,
 				88CE07BE2A8B72DE00243F48 /* Codable+Extensions.swift in Sources */,
 				88CE07E02A8B8A3B00243F48 /* UIViewController+Extensions.swift in Sources */,
@@ -501,6 +520,7 @@
 				88CE07BC2A8B72C700243F48 /* URLComponents+Extensions.swift in Sources */,
 				88CE076B2A8B5F5400243F48 /* SceneDelegate.swift in Sources */,
 				88CE07CD2A8B7BE900243F48 /* ReachabilityManager.swift in Sources */,
+				88CE07E72A8B914100243F48 /* Repo.swift in Sources */,
 				88CE07BA2A8B729A00243F48 /* URLRequest+Extensions.swift in Sources */,
 				88CE07C92A8B7B6300243F48 /* URLSessionProtocol.swift in Sources */,
 				88CE078B2A8B618500243F48 /* Constants.swift in Sources */,

@@ -10,6 +10,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignInController" customModule="ios_onyx_delivery" customModuleProvider="target">
             <connections>
+                <outlet property="btnLogIn" destination="5lS-t7-UfQ" id="WSF-WA-XZ8"/>
                 <outlet property="txtFldPassword" destination="qsr-Yh-WBd" id="hvP-kr-kvs"/>
                 <outlet property="txtFldUserId" destination="Dr6-mt-8nz" id="L45-K9-MbW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

@@ -12,7 +12,7 @@ protocol SignInInterface {
 }
 
 protocol SignInResultInterface {
-    func success()
+    func success(user: SignInResponse)
     func error(error: APIError)
 }
 
@@ -22,8 +22,18 @@ class LoginViewModel: SignInInterface {
     var delegate: SignInResultInterface?
     
     func login(form: SignInForm) {
-        if Validator().isNotEmpty(form.username) && Validator().isNotEmpty(form.password) && Validator().isPassword(form.password) {
-            delegate?.success()
+        if Validator().isNotEmpty(form.user.userId) && Validator().isNotEmpty(form.user.password) && Validator().isPassword(form.user.password) {
+            AuthRepo.shared.login(signForm: form) { [ weak self ] response in
+                guard let self = self else { return }
+                DispatchQueue.main.async {
+                    switch response {
+                    case let .onSuccess(response):
+                        self.delegate?.success(user: response)
+                    case let .onFailure(error):
+                        self.delegate?.error(error: error)
+                    }
+                }
+            }
         } else {
             delegate?.error(error: APIError(type: .noData, message: Constants.invalidCredentials))
         }

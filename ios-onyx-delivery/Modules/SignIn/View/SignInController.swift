@@ -12,6 +12,7 @@ class SignInController: UIViewController {
     
     @IBOutlet weak var txtFldUserId: AppTextField!
     @IBOutlet weak var txtFldPassword: AppTextField!
+    @IBOutlet weak var btnLogIn: AppButton!
     
     let viewModel = LoginViewModel()
     
@@ -33,16 +34,26 @@ class SignInController: UIViewController {
     // MARK: - UI Events
     
     @IBAction func btnLogInClicked(_ sender: Any) {
-        viewModel.login(form: SignInForm(username: txtFldUserId.text, password: txtFldPassword.text))
+        btnLogIn.showLoading()
+        viewModel.login(form: SignInForm(user: User(userId: txtFldUserId.text ?? "", password: txtFldPassword.text ?? "", language: Constants.defaultLanguageNumber)))
     }
 }
 
 extension SignInController: SignInResultInterface {
-    func success() {
+    func success(user: SignInResponse) {
+        btnLogIn.hideLoading()
         print("success")
+        print(user)
+        
+        if user.result?.message == "Successful" {
+            
+        } else {
+            showError(message: user.result?.message ?? Constants.generalResponse)
+        }
     }
     
     func error(error: APIError) {
+        btnLogIn.hideLoading()
         showError(message: error.message)
     }
     

@@ -7,12 +7,29 @@
 
 import Foundation
 
-struct SignInForm {
-    var username: String?
-    var password: String?
+struct SignInForm: Codable {
+    let user: User
+}
+
+extension SignInForm {
     
-    init(username: String?, password: String?) {
-        self.username = username
-        self.password = password
+    enum CodingKeys: String, CodingKey {
+        case user = "Value"
+    }
+}
+
+
+struct User: Codable {
+    let userId: String
+    let password: String
+    let language: String
+}
+
+extension User {
+    
+    enum CodingKeys: String, CodingKey {
+        case userId = "P_DLVRY_NO"
+        case password = "P_PSSWRD"
+        case language = "P_LANG_NO"
     }
 }
