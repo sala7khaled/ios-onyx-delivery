@@ -17,8 +17,7 @@ protocol SignInResultInterface {
 }
 
 class LoginViewModel: SignInInterface {
-    
-    var user: SignInForm?
+
     var delegate: SignInResultInterface?
     
     func login(form: SignInForm) {

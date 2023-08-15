@@ -13,3 +13,8 @@ struct OrderModel {
     var price: String
     var date: String
 }
+
+//enum OrderType {
+//    case new
+//    case 
+//}

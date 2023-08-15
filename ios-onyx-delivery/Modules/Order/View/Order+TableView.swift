@@ -15,22 +15,12 @@ extension OrderController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 7
+        return orders.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeue(cellClass: OrderCell.self)
-        
-        var s: [OrderModel] = []
-        s.append(OrderModel(orderId: "ssss", status: "sss", price: "sss", date: "sssssssss"))
-        s.append(OrderModel(orderId: "ssss", status: "sss", price: "sss", date: "sssssssss"))
-        s.append(OrderModel(orderId: "ssss", status: "sss", price: "sss", date: "sssssssss"))
-        s.append(OrderModel(orderId: "ssss", status: "sss", price: "sss", date: "sssssssss"))
-        s.append(OrderModel(orderId: "ssss", status: "sss", price: "sss", date: "sssssssss"))
-        s.append(OrderModel(orderId: "ssss", status: "sss", price: "sss", date: "sssssssss"))
-        s.append(OrderModel(orderId: "ssss", status: "sss", price: "sss", date: "sssssssss"))
-        
-        cell.configure(with: s[indexPath.row])
+        cell.configure(with: orders[indexPath.row])
         return cell
     }
 

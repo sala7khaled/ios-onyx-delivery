@@ -58,6 +58,8 @@
 		88CE08042A8BA6E600243F48 /* OrderService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE08032A8BA6E600243F48 /* OrderService.swift */; };
 		88CE08062A8BA77C00243F48 /* OrderDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE08052A8BA77C00243F48 /* OrderDetail.swift */; };
 		88CE08082A8BA7F100243F48 /* DeliveryBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE08072A8BA7F100243F48 /* DeliveryBill.swift */; };
+		88CE080A2A8BA9AE00243F48 /* OrderRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE08092A8BA9AE00243F48 /* OrderRepo.swift */; };
+		88CE080C2A8BAAD800243F48 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE080B2A8BAAD800243F48 /* OrderViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -114,6 +116,8 @@
 		88CE08032A8BA6E600243F48 /* OrderService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderService.swift; sourceTree = "<group>"; };
 		88CE08052A8BA77C00243F48 /* OrderDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDetail.swift; sourceTree = "<group>"; };
 		88CE08072A8BA7F100243F48 /* DeliveryBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryBill.swift; sourceTree = "<group>"; };
+		88CE08092A8BA9AE00243F48 /* OrderRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepo.swift; sourceTree = "<group>"; };
+		88CE080B2A8BAAD800243F48 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -240,6 +244,7 @@
 			children = (
 				88CE07E62A8B914100243F48 /* Repo.swift */,
 				88CE07E42A8B913200243F48 /* AuthRepo.swift */,
+				88CE08092A8BA9AE00243F48 /* OrderRepo.swift */,
 			);
 			path = Repo;
 			sourceTree = "<group>";
@@ -469,6 +474,7 @@
 		88CE07EC2A8B999200243F48 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				88CE080B2A8BAAD800243F48 /* OrderViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -608,12 +614,14 @@
 				88CE07F92A8B9E8900243F48 /* UITableView+Extensions.swift in Sources */,
 				88CE07FC2A8B9EAB00243F48 /* OrderCell.swift in Sources */,
 				88CE07692A8B5F5400243F48 /* AppDelegate.swift in Sources */,
+				88CE080A2A8BA9AE00243F48 /* OrderRepo.swift in Sources */,
 				88CE07D12A8B7D5A00243F48 /* Fail.swift in Sources */,
 				88CE07962A8B631300243F48 /* UIColor+Extensions.swift in Sources */,
 				88CE07A02A8B6B4900243F48 /* SignInController.swift in Sources */,
 				88CE07BC2A8B72C700243F48 /* URLComponents+Extensions.swift in Sources */,
 				88CE076B2A8B5F5400243F48 /* SceneDelegate.swift in Sources */,
 				88CE07FF2A8BA27700243F48 /* OrderModel.swift in Sources */,
+				88CE080C2A8BAAD800243F48 /* OrderViewModel.swift in Sources */,
 				88CE07CD2A8B7BE900243F48 /* ReachabilityManager.swift in Sources */,
 				88CE07E72A8B914100243F48 /* Repo.swift in Sources */,
 				88CE07F62A8B9E2100243F48 /* IntrinsicTableView.swift in Sources */,

@@ -7,14 +7,26 @@
 
 import Foundation
 
+struct BillData: Codable {
+    let data: DeliveryBill?
+}
+
+extension BillData {
+    
+    enum CodingKeys: String, CodingKey {
+        case data = "Data"
+    }
+}
+
+
 struct DeliveryBill: Codable {
-    let data: Bill?
+    let bill: [Bill]
 }
 
 extension DeliveryBill {
     
     enum CodingKeys: String, CodingKey {
-        case order = "Value"
+        case bill = "DeliveryBills"
     }
 }
 
@@ -23,6 +35,7 @@ struct Bill: Codable {
     let number: String?
     let date: String?
     let tax: String?
+    let status: String?
 }
 
 extension Bill {
@@ -31,5 +44,6 @@ extension Bill {
         case number = "BILL_NO"
         case date = "BILL_DATE"
         case tax = "TAX_AMT"
+        case status = "DLVRY_STATUS_FLG"
     }
 }

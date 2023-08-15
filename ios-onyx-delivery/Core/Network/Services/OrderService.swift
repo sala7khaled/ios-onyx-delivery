@@ -15,36 +15,36 @@ extension Api {
         
         var path: String {
             switch self {
-            case .login:
-                return API.SERVICE_AUTH_LOGIN
+            case .getOrder:
+                return API.SERVICE_ORDER_ITEMS
             }
         }
         
         var method: HTTPMethod {
             switch self {
-            case .login:
+            case .getOrder:
                 return .POST
             }
         }
         
         var parameters: [String : Any]? {
             switch self {
-            case .login:
+            case .getOrder:
                 return nil
             }
         }
         
         var headers: Headers? {
             switch self {
-            case .login:
+            case .getOrder:
                 return nil
             }
         }
         
         var body: Any? {
             switch self {
-            case let .login(signForm):
-                return signForm
+            case let .getOrder(orderDetail):
+                return orderDetail
             }
         }
     }
