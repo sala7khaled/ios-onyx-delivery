@@ -13,6 +13,7 @@ enum Constants {
     static let appName = "Onyx Delivery"
     static let invalidCredentials = "Invalid inputs, please check username, password and try again"
     static let defaultCornerRadius: CGFloat = 22
+    static let defaultTimeOut: CGFloat = 120
     static let defaultLanguageNumber: String = "2"
     static let userInfoKey = "userInfoKey"
     
