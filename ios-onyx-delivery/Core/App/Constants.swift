@@ -14,6 +14,7 @@ enum Constants {
     static let invalidCredentials = "Invalid inputs, please check username, password and try again"
     static let defaultCornerRadius: CGFloat = 22
     static let defaultLanguageNumber: String = "2"
+    static let userInfoKey = "userInfoKey"
     
     
     // MARK: - RESPONSE

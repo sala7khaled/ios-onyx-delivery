@@ -9,12 +9,13 @@ import Foundation
 
 struct OrderModel {
     var orderId: String
+    var customer: String
     var status: String
-    var price: String
+    var price: String?
     var date: String
 }
 
-//enum OrderType {
-//    case new
-//    case 
-//}
+enum Loading {
+    case show
+    case hide
+}

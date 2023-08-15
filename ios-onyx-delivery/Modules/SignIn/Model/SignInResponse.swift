@@ -8,13 +8,25 @@
 import Foundation
 
 struct SignInResponse: Codable {
+    let data: UserData?
     let result: Result?
 }
 
 extension SignInResponse {
     
     enum CodingKeys: String, CodingKey {
+        case data = "Data"
         case result = "Result"
+    }
+}
+
+struct UserData: Codable {
+    let name: String?
+}
+
+extension UserData {
+    enum CodingKeys: String, CodingKey {
+        case name = "DeliveryName"
     }
 }
 

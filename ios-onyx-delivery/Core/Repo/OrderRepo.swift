@@ -12,14 +12,28 @@ class OrderRepo: Repo {
     static let shared = OrderRepo()
 
     func getOrder(orderDetail: OrderDetail, _ completion: @escaping (APIResponse<BillData>) -> ()) {
-        provider.request(type: BillData.self, service: Api.Order.getOrder(orderDetail: orderDetail)) { response in
+        provider.request(type: BillData.self, service: Api.Order.getOrder(orderDetail: orderDetail)) { [self] response in
             switch (response) {
             case let .onSuccess(response):
-                completion(.onSuccess(response))
+                self.insertOrderIntoLocal(response.data!.bill)
+                if let bills = getOrderFromLocal() {
+                    completion(.onSuccess(BillData(data: DeliveryBill(bill: bills))))
+                } else {
+                    completion(.onFailure(APIError(type: .noData, message: Constants.noDataResponse)))
+                }
+                
             case let .onFailure(error):
                 completion(.onFailure(error))
             }
         }
+    }
+    
+    func insertOrderIntoLocal(_ bills: [Bill]) {
+        LocalDataSource.shared.insertBills(bills: bills)
+    }
+    
+    func getOrderFromLocal() -> [Bill]? {
+        return LocalDataSource.shared.retrieveBills()
     }
 
 }

@@ -49,8 +49,13 @@ class OrderCell: UITableViewCell {
         
         
         lblOrderId.text = "#\(order.orderId)"
-        lblPrice.text = order.price
         lblDate.text = order.date
+        
+        guard let price = order.price?.components(separatedBy: ".")[0] else {
+            lblPrice.text = "0 LE"
+            return
+        }
+        lblPrice.text = "\(price) LE"
     }
     
 }

@@ -29,6 +29,8 @@ extension OrderController: UITableViewDelegate, UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        showAlert(title: s[indexPath.row], message: s[indexPath.row])
+        
+        let order = orders[indexPath.row]
+        showAlert(title: order.customer, message: "You clicked order #\(order.orderId)\nWhich ordered on: \(order.date)")
     }
 }

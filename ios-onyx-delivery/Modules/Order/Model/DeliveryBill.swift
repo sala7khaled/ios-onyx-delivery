@@ -36,6 +36,7 @@ struct Bill: Codable {
     let date: String?
     let tax: String?
     let status: String?
+    let customer: String?
 }
 
 extension Bill {
@@ -45,5 +46,6 @@ extension Bill {
         case date = "BILL_DATE"
         case tax = "TAX_AMT"
         case status = "DLVRY_STATUS_FLG"
+        case customer = "CSTMR_NM"
     }
 }

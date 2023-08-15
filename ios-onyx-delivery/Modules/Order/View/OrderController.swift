@@ -10,7 +10,11 @@ import UIKit
 class OrderController: UIViewController {
 
     @IBOutlet weak var segmentedControl: UISegmentedControl!
+    @IBOutlet weak var loadingIndicator: UIActivityIndicatorView!
     @IBOutlet weak var tableView: IntrinsicTableView!
+    @IBOutlet weak var lblDeliveryName: UILabel!
+    
+    let userDefaults = UserDefaults.standard
     
     let viewModel = OrderViewModel()
     var orders: [OrderModel] = []
@@ -19,22 +23,24 @@ class OrderController: UIViewController {
         super.viewDidLoad()
         initTableView()
         setupView()
-        viewModel.getOrder(orderDetail: OrderDetail(order: Order(userId: "1010", language: Constants.defaultLanguageNumber, serial: "", flag: "\(segmentedControl.selectedSegmentIndex)")))
+        getOrder()
     }
     
     func setupView() {
         viewModel.delegate = self
-        
-        let selectedAttributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: UIColor.appWhite
-        ]
-        segmentedControl.setTitleTextAttributes(selectedAttributes, for: .selected)
-        let normalAttributes: [NSAttributedString.Key: Any] = [
-            .foregroundColor: UIColor.appBlack
-        ]
-        segmentedControl.setTitleTextAttributes(normalAttributes, for: .normal)
-        segmentedControl.layer.cornerRadius = 2
-        segmentedControl.clipsToBounds = true
+        setupSegmentedControl()
+        setupLoading(.show)
+        setUserInfo()
+    }
+    
+    func getOrder() {
+        viewModel.getOrder(orderDetail: OrderDetail(order: Order(userId: "1010", language: Constants.defaultLanguageNumber, serial: "", flag: "\(segmentedControl.selectedSegmentIndex)")))
+    }
+    
+    func setUserInfo() {
+        if let userInfo = userDefaults.string(forKey: Constants.userInfoKey) {
+            lblDeliveryName.text = userInfo
+        }
     }
 
     @IBAction func segmentedControlClicked(_ sender: Any) {
@@ -43,22 +49,43 @@ class OrderController: UIViewController {
 }
 
 extension OrderController: OrderResultInterface {
+    
     func success(bills: BillData) {
-        orders.removeAll()
         
+        orders.removeAll()
         if let billArray = bills.data?.bill {
+            
             for order in billArray {
-                
-                let taxs = order.tax?.components(separatedBy: ".")
-                orders.append(OrderModel(orderId: order.number ?? "", status: order.status ?? "", price: taxs?[0] ?? "", date: order.date ?? ""))
+                orders.append(OrderModel(orderId: order.number ?? "", customer: order.customer ?? "", status: order.status ?? "", price: order.tax ?? "", date: order.date ?? ""))
             }
         }
         tableView.reloadData()
+        setupLoading(.hide)
     }
-    
     
     func error(error: APIError) {
         showError(message: error.message)
     }
     
+}
+
+
+// MARK: - Loading
+
+extension OrderController {
+    func setupLoading(_ load: Loading) {
+        
+        switch load {
+        case .show:
+            loadingIndicator.startAnimating()
+            loadingIndicator.isHidden = false
+            tableView.isHidden = true
+            break
+        case .hide:
+            loadingIndicator.stopAnimating()
+            loadingIndicator.isHidden = true
+            tableView.isHidden = false
+            break
+        }
+    }
 }

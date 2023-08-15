@@ -21,6 +21,7 @@ class OrderViewModel: OrderInterface {
     var delegate: OrderResultInterface?
     
     func getOrder(orderDetail: OrderDetail) {
+        
         OrderRepo.shared.getOrder(orderDetail: orderDetail) { [ weak self ] response in
             guard let self = self else { return }
             DispatchQueue.main.async {
@@ -28,9 +29,16 @@ class OrderViewModel: OrderInterface {
                 case let .onSuccess(response):
                     self.delegate?.success(bills: response)
                 case let .onFailure(error):
-                    self.delegate?.error(error: error)
+                    
+                    if let orders = OrderRepo.shared.getOrderFromLocal() {
+                        self.delegate?.success(bills: BillData(data: DeliveryBill(bill: orders)))
+                    } else {
+                        self.delegate?.error(error: error)
+                    }
                 }
             }
         }
+        
+        
     }
 }

@@ -60,6 +60,8 @@
 		88CE08082A8BA7F100243F48 /* DeliveryBill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE08072A8BA7F100243F48 /* DeliveryBill.swift */; };
 		88CE080A2A8BA9AE00243F48 /* OrderRepo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE08092A8BA9AE00243F48 /* OrderRepo.swift */; };
 		88CE080C2A8BAAD800243F48 /* OrderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE080B2A8BAAD800243F48 /* OrderViewModel.swift */; };
+		88CE080E2A8BB31900243F48 /* Order+SegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE080D2A8BB31900243F48 /* Order+SegmentedControl.swift */; };
+		88CE08112A8BB99400243F48 /* LocalDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE08102A8BB99400243F48 /* LocalDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -118,6 +120,8 @@
 		88CE08072A8BA7F100243F48 /* DeliveryBill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryBill.swift; sourceTree = "<group>"; };
 		88CE08092A8BA9AE00243F48 /* OrderRepo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderRepo.swift; sourceTree = "<group>"; };
 		88CE080B2A8BAAD800243F48 /* OrderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderViewModel.swift; sourceTree = "<group>"; };
+		88CE080D2A8BB31900243F48 /* Order+SegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Order+SegmentedControl.swift"; sourceTree = "<group>"; };
+		88CE08102A8BB99400243F48 /* LocalDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +239,7 @@
 		88CE07842A8B60E600243F48 /* Local */ = {
 			isa = PBXGroup;
 			children = (
+				88CE080F2A8BB98600243F48 /* SQL */,
 			);
 			path = Local;
 			sourceTree = "<group>";
@@ -465,6 +470,7 @@
 			children = (
 				88CE07F32A8B9DE500243F48 /* Cell */,
 				88CE07F12A8B9DE100243F48 /* Order+TableView.swift */,
+				88CE080D2A8BB31900243F48 /* Order+SegmentedControl.swift */,
 				88CE07ED2A8B99A600243F48 /* OrderController.swift */,
 				88CE07EE2A8B99A600243F48 /* OrderController.xib */,
 			);
@@ -510,6 +516,14 @@
 				88CE08012A8BA4AA00243F48 /* UIView+Extensions.swift */,
 			);
 			path = UIView;
+			sourceTree = "<group>";
+		};
+		88CE080F2A8BB98600243F48 /* SQL */ = {
+			isa = PBXGroup;
+			children = (
+				88CE08102A8BB99400243F48 /* LocalDataSource.swift */,
+			);
+			path = SQL;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -613,6 +627,7 @@
 				88CE08062A8BA77C00243F48 /* OrderDetail.swift in Sources */,
 				88CE07F92A8B9E8900243F48 /* UITableView+Extensions.swift in Sources */,
 				88CE07FC2A8B9EAB00243F48 /* OrderCell.swift in Sources */,
+				88CE080E2A8BB31900243F48 /* Order+SegmentedControl.swift in Sources */,
 				88CE07692A8B5F5400243F48 /* AppDelegate.swift in Sources */,
 				88CE080A2A8BA9AE00243F48 /* OrderRepo.swift in Sources */,
 				88CE07D12A8B7D5A00243F48 /* Fail.swift in Sources */,
@@ -626,6 +641,7 @@
 				88CE07E72A8B914100243F48 /* Repo.swift in Sources */,
 				88CE07F62A8B9E2100243F48 /* IntrinsicTableView.swift in Sources */,
 				88CE07BA2A8B729A00243F48 /* URLRequest+Extensions.swift in Sources */,
+				88CE08112A8BB99400243F48 /* LocalDataSource.swift in Sources */,
 				88CE07C92A8B7B6300243F48 /* URLSessionProtocol.swift in Sources */,
 				88CE078B2A8B618500243F48 /* Constants.swift in Sources */,
 				88CE07B02A8B700A00243F48 /* Api.swift in Sources */,
