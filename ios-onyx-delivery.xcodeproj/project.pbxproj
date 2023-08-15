@@ -12,6 +12,8 @@
 		88CE07722A8B5F5500243F48 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 88CE07712A8B5F5500243F48 /* Assets.xcassets */; };
 		88CE07752A8B5F5500243F48 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 88CE07732A8B5F5500243F48 /* LaunchScreen.storyboard */; };
 		88CE078B2A8B618500243F48 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE078A2A8B618500243F48 /* Constants.swift */; };
+		88CE078F2A8B624800243F48 /* RootRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE078E2A8B624800243F48 /* RootRouter.swift */; };
+		88CE07962A8B631300243F48 /* UIColor+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88CE07952A8B631300243F48 /* UIColor+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		88CE07742A8B5F5500243F48 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		88CE07762A8B5F5500243F48 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		88CE078A2A8B618500243F48 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		88CE078E2A8B624800243F48 /* RootRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootRouter.swift; sourceTree = "<group>"; };
+		88CE07952A8B631300243F48 /* UIColor+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIColor+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -96,6 +100,7 @@
 		88CE077F2A8B60B800243F48 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				88CE078C2A8B623B00243F48 /* Root */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -150,6 +155,7 @@
 		88CE07872A8B610B00243F48 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				88CE07942A8B630400243F48 /* UIColor */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -166,6 +172,22 @@
 			children = (
 			);
 			path = Reuseable;
+			sourceTree = "<group>";
+		};
+		88CE078C2A8B623B00243F48 /* Root */ = {
+			isa = PBXGroup;
+			children = (
+				88CE078E2A8B624800243F48 /* RootRouter.swift */,
+			);
+			path = Root;
+			sourceTree = "<group>";
+		};
+		88CE07942A8B630400243F48 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				88CE07952A8B631300243F48 /* UIColor+Extension.swift */,
+			);
+			path = UIColor;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -238,7 +260,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				88CE078F2A8B624800243F48 /* RootRouter.swift in Sources */,
 				88CE07692A8B5F5400243F48 /* AppDelegate.swift in Sources */,
+				88CE07962A8B631300243F48 /* UIColor+Extension.swift in Sources */,
 				88CE076B2A8B5F5400243F48 /* SceneDelegate.swift in Sources */,
 				88CE078B2A8B618500243F48 /* Constants.swift in Sources */,
 			);
@@ -381,7 +405,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D3WMCF7Y5L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ios-onyx-delivery/Info.plist";
+				INFOPLIST_FILE = "ios-onyx-delivery/Resources/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Onyx Delivery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -413,7 +437,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = D3WMCF7Y5L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "ios-onyx-delivery/Info.plist";
+				INFOPLIST_FILE = "ios-onyx-delivery/Resources/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "Onyx Delivery";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
