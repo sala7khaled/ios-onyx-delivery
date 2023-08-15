@@ -28,6 +28,9 @@ class SignInController: UIViewController {
     func setupView() {
         viewModel.delegate = self
         txtFldPassword.enablePasswordToggle()
+        
+        txtFldUserId.text = "1010"
+        txtFldPassword.text = "1"
     }
 
     
@@ -42,11 +45,9 @@ class SignInController: UIViewController {
 extension SignInController: SignInResultInterface {
     func success(user: SignInResponse) {
         btnLogIn.hideLoading()
-        print("success")
-        print(user)
         
         if user.result?.message == "Successful" {
-            
+            RootRouter.presentRoot(OrderController())
         } else {
             showError(message: user.result?.message ?? Constants.generalResponse)
         }

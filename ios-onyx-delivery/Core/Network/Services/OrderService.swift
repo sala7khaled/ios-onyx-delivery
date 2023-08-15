@@ -1,5 +1,5 @@
 //
-//  AuthService.swift
+//  OrderService.swift
 //  ios-onyx-delivery
 //
 //  Created by Salah's iMac on 15/08/2023.
@@ -9,9 +9,9 @@ import Foundation
 
 extension Api {
     
-    enum Auth: ServiceProtocol {
+    enum Order: ServiceProtocol {
         
-        case login(signForm: SignInForm)
+        case getOrder(orderDetail: OrderDetail)
         
         var path: String {
             switch self {

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="OrderController" customModule="ios_onyx_delivery" customModuleProvider="target">
+            <connections>
+                <outlet property="segmentedControl" destination="y1z-Uk-vtR" id="ALU-oA-rhm"/>
+                <outlet property="tableView" destination="FWc-z6-AcA" id="xHg-fW-Nf8"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img-order-bg" translatesAutoresizingMaskIntoConstraints="NO" id="nfo-NG-XKs">
+                    <rect key="frame" x="0.0" y="0.0" width="393" height="127"/>
+                </imageView>
+                <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="y1z-Uk-vtR">
+                    <rect key="frame" x="70" y="147" width="253" height="37"/>
+                    <color key="backgroundColor" name="White"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="36" id="WZL-9T-Gx7"/>
+                    </constraints>
+                    <segments>
+                        <segment title="New"/>
+                        <segment title="Others"/>
+                    </segments>
+                    <color key="tintColor" name="White"/>
+                    <color key="selectedSegmentTintColor" name="Primary"/>
+                </segmentedControl>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="FWc-z6-AcA" customClass="IntrinsicTableView" customModule="ios_onyx_delivery" customModuleProvider="target">
+                    <rect key="frame" x="0.0" y="223" width="393" height="595"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </tableView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" name="White"/>
+            <constraints>
+                <constraint firstItem="y1z-Uk-vtR" firstAttribute="top" secondItem="nfo-NG-XKs" secondAttribute="bottom" constant="20" id="39E-Ra-IjH"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="nfo-NG-XKs" secondAttribute="trailing" id="5WS-lG-wBK"/>
+                <constraint firstItem="y1z-Uk-vtR" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="70" id="DHH-km-kth"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="y1z-Uk-vtR" secondAttribute="trailing" constant="70" id="GfL-Vv-uhB"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="FWc-z6-AcA" secondAttribute="bottom" id="csP-Bi-z4j"/>
+                <constraint firstItem="nfo-NG-XKs" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="d3c-tp-LgN"/>
+                <constraint firstItem="nfo-NG-XKs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="ikt-A0-2w0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="FWc-z6-AcA" secondAttribute="trailing" id="kT5-Qr-BBj"/>
+                <constraint firstItem="FWc-z6-AcA" firstAttribute="top" secondItem="y1z-Uk-vtR" secondAttribute="bottom" constant="40" id="m5A-36-gs9"/>
+                <constraint firstItem="FWc-z6-AcA" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="rYf-sa-Mun"/>
+            </constraints>
+            <point key="canvasLocation" x="-8" y="20"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="img-order-bg" width="370" height="127"/>
+        <namedColor name="Primary">
+            <color red="0.0" green="0.30980392156862746" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <namedColor name="White">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
+</document>

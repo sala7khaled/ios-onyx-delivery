@@ -18,7 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         window = UIWindow(frame: windowScene.coordinateSpace.bounds)
         window?.windowScene = windowScene
         window?.tintColor = .primary
-        RootRouter.presentRootScreen(in: window, vc: SignInController())
+//        RootRouter.presentRootScreen(in: window, vc: SignInController())
+        RootRouter.presentRootScreen(in: window, vc: OrderController())
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
