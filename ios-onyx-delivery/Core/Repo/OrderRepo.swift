@@ -16,7 +16,7 @@ class OrderRepo: Repo {
             switch (response) {
             case let .onSuccess(response):
                 self.insertOrderIntoLocal(response.data!.bill)
-                if let bills = getOrderFromLocal() {
+                if let bills = getOrderFromLocal(orderDetail.order.flag) {
                     completion(.onSuccess(BillData(data: DeliveryBill(bill: bills))))
                 } else {
                     completion(.onFailure(APIError(type: .noData, message: Constants.noDataResponse)))
@@ -29,11 +29,11 @@ class OrderRepo: Repo {
     }
     
     func insertOrderIntoLocal(_ bills: [Bill]) {
-        LocalDataSource.shared.insertBills(bills: bills)
+        LocalDataSource.shared.upsertBills(bills: bills)
     }
     
-    func getOrderFromLocal() -> [Bill]? {
-        return LocalDataSource.shared.retrieveBills()
+    func getOrderFromLocal(_ status: String) -> [Bill]? {
+        return LocalDataSource.shared.retrieveBills(status: status)
     }
 
 }

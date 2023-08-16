@@ -29,16 +29,10 @@ class OrderViewModel: OrderInterface {
                 case let .onSuccess(response):
                     self.delegate?.success(bills: response)
                 case let .onFailure(error):
-                    
-                    if let orders = OrderRepo.shared.getOrderFromLocal() {
-                        self.delegate?.success(bills: BillData(data: DeliveryBill(bill: orders)))
-                    } else {
-                        self.delegate?.error(error: error)
-                    }
+                    self.delegate?.error(error: error)
                 }
             }
         }
-        
         
     }
 }

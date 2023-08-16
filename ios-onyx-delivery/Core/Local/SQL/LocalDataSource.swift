@@ -43,33 +43,35 @@ class LocalDataSource {
         }
     }
 
-    func insertBills(bills: [Bill]) {
-        let insertQuery = """
-            INSERT INTO Bill (number, date, tax, status, customer)
+    func upsertBills(bills: [Bill]) {
+        
+        removeAllBills()
+        let upsertQuery = """
+            INSERT OR REPLACE INTO Bill (number, date, tax, status, customer)
             VALUES (?, ?, ?, ?, ?);
         """
-
+        
         for bill in bills {
             var statement: OpaquePointer?
-            if sqlite3_prepare_v2(database, insertQuery, -1, &statement, nil) == SQLITE_OK {
+            if sqlite3_prepare_v2(database, upsertQuery, -1, &statement, nil) == SQLITE_OK {
                 sqlite3_bind_text(statement, 1, (bill.number! as NSString).utf8String, -1, nil)
                 sqlite3_bind_text(statement, 2, (bill.date! as NSString).utf8String, -1, nil)
                 sqlite3_bind_text(statement, 3, (bill.tax! as NSString).utf8String, -1, nil)
                 sqlite3_bind_text(statement, 4, (bill.status! as NSString).utf8String, -1, nil)
                 sqlite3_bind_text(statement, 5, (bill.customer! as NSString).utf8String, -1, nil)
-
+                
                 if sqlite3_step(statement) != SQLITE_DONE {
-                    print("Error inserting bill")
+                    print("Error upserting bill")
                 }
             }
-
+            
             sqlite3_finalize(statement)
         }
     }
     
-    func retrieveBills() -> [Bill] {
+    func retrieveBills(status: String) -> [Bill] {
         let retrieveAllQuery = """
-            SELECT * FROM Bill;
+            SELECT * FROM Bill WHERE status = \(status);
         """
 
         var statement: OpaquePointer?
@@ -90,5 +92,20 @@ class LocalDataSource {
 
         sqlite3_finalize(statement)
         return bills
+    }
+    
+    private func removeAllBills() {
+        let deleteQuery = """
+            DELETE FROM Bill;
+        """
+        
+        var statement: OpaquePointer?
+        if sqlite3_prepare_v2(database, deleteQuery, -1, &statement, nil) == SQLITE_OK {
+            if sqlite3_step(statement) != SQLITE_DONE {
+                print("Error removing bills")
+            }
+        }
+        
+        sqlite3_finalize(statement)
     }
 }
