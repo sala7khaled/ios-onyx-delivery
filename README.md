@@ -19,3 +19,14 @@ If you have any questions, please feel free to contact the project maintainer:
 - Name: [Salah Khaled](Https://www.linkedin.com/in/sala7khaled/)
 - Email: sala7khaled7@gmail.com
 - Website: [linktree/sala7khaled](https://linktr.ee/sala7khaled)
+
+
+## Preview
+### Launch
+<img src="/Assets/1.png" alt="Demo" height="600px"/>
+
+### Sign In
+<img src="/Assets/2.png" alt="Demo" height="600px"/>
+
+### Orders
+<img src="/Assets/3.png" alt="Demo" height="600px"/> &nbsp; &nbsp; <img src="/Assets/4.png" alt="Demo" height="600px"/>
