@@ -14,6 +14,7 @@ class OrderCell: UITableViewCell {
     @IBOutlet weak var lblStatus: UILabel!
     @IBOutlet weak var lblPrice: UILabel!
     @IBOutlet weak var lblDate: UILabel!
+    @IBOutlet weak var viewDetails: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -29,22 +30,27 @@ class OrderCell: UITableViewCell {
         case "0":
             lblStatus.text = "New"
             lblStatus.textColor = .appGreen
+            viewDetails.backgroundColor = .appGreen
             break
         case "1":
             lblStatus.text = "Delivering"
             lblStatus.textColor = .mainText
+            viewDetails.backgroundColor = .mainText
             break
         case "2":
             lblStatus.text = "Delivered"
             lblStatus.textColor = .subText
+            viewDetails.backgroundColor = .subText
             break
         case "3":
             lblStatus.text = "Returned"
             lblStatus.textColor = .appRed
+            viewDetails.backgroundColor = .appRed
             break
         default:
             lblStatus.text = "New"
             lblStatus.textColor = .appGreen
+            viewDetails.backgroundColor = .appGreen
         }
         
         

@@ -170,6 +170,7 @@
                 <outlet property="lblPrice" destination="LWX-HU-dnh" id="RPo-Xb-wVK"/>
                 <outlet property="lblStatus" destination="xYH-Ee-4rb" id="tTW-1D-mXs"/>
                 <outlet property="viewBackground" destination="72e-q7-Qz4" id="KgK-tg-6fa"/>
+                <outlet property="viewDetails" destination="Iqs-dS-YRW" id="ERn-5G-qb3"/>
             </connections>
             <point key="canvasLocation" x="48.091603053435115" y="59.507042253521128"/>
         </tableViewCell>
@@ -177,13 +178,13 @@
     <resources>
         <image name="ic-back" width="16" height="32"/>
         <namedColor name="Green">
-            <color red="0.16078431372549018" green="0.83137254901960778" blue="0.058823529411764705" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.16099999845027924" green="0.83099997043609619" blue="0.059000000357627869" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="MainText">
-            <color red="0.0" green="0.30980392156862746" blue="0.38431372549019605" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.0" green="0.31000000238418579" blue="0.38400000333786011" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SubText">
-            <color red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.50199997425079346" green="0.50199997425079346" blue="0.50199997425079346" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="White">
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
