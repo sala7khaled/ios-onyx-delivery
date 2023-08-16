@@ -28,9 +28,6 @@ class SignInController: UIViewController {
     func setupView() {
         viewModel.delegate = self
         txtFldPassword.enablePasswordToggle()
-        
-        txtFldUserId.text = "1010"
-        txtFldPassword.text = "1"
     }
 
     
