@@ -26,6 +26,9 @@ class OrderCell: UITableViewCell {
     }
     
     func configure(with order: OrderModel) {
+        
+        print("Orderststststs", order.status)
+        
         switch order.status {
         case "0":
             lblStatus.text = "New"

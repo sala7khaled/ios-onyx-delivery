@@ -69,9 +69,10 @@ class LocalDataSource {
         }
     }
     
-    func retrieveBills(status: String) -> [Bill] {
+    func retrieveBills() -> [Bill] {
+        
         let retrieveAllQuery = """
-            SELECT * FROM Bill WHERE status = \(status);
+            SELECT * FROM Bill;
         """
 
         var statement: OpaquePointer?

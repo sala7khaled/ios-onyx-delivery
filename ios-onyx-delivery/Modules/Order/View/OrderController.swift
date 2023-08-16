@@ -52,6 +52,8 @@ extension OrderController: OrderResultInterface {
     
     func success(bills: BillData) {
         
+        print("orderrrrr",bills)
+        
         orders.removeAll()
         if let billArray = bills.data?.bill {
             
@@ -59,6 +61,8 @@ extension OrderController: OrderResultInterface {
                 orders.append(OrderModel(orderId: order.number ?? "", customer: order.customer ?? "", status: order.status ?? "", price: order.tax ?? "", date: order.date ?? ""))
             }
         }
+        
+        
         tableView.reloadData()
         setupLoading(.hide)
     }
