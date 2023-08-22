@@ -1,15 +1,17 @@
 <img src="ios-onyx-delivery/Resources/Assets.xcassets/AppIcon.appiconset/Group 31.jpg" height="80">
 
 # Onyx Delivery
-The app is designed to retrieve the order bills list from the backend API, then ensure saving it into the SQL database (with written SQL statements), after that, the app displays the cashed bills list in the table view that appears to the user (I managed to have one and only one source to display the data from.. "The only source of truth").
+The app is designed to retrieve the order bills list from the backend API, then ensure saving it into the SQL database (with written SQL statements), after that, the app displays the cashed bills list in the table view that appears to the user (I managed to have one and only one source to display the data from.. *"Single source of truth"*).
 
 <br>
 <be>
 
 ## Features
-* Singleton Design: The class employs the Singleton design pattern, ensuring that only a single instance of `LocalDataSource` can be created. This instance is accessed via the shared property.
-* Database Initialization: Upon instantiation, the class establishes a connection to an `SQLite` database located in the application's document directory.
-* Table Creation: The class creates an `SQLite` table named `Bill` if it does not already exist. This table is used to store bill-related information, including attributes such as `number`, `date`, `tax`, `status`, and `customer`.
+* **Singleton Design:** The class employs the Singleton design pattern, ensuring that only a single instance of `LocalDataSource` can be created. This instance is accessed via the shared property.
+  
+* **Database Initialization:** Upon instantiation, the class establishes a connection to an `SQLite` database located in the application's document directory.
+  
+* **Table Creation:** The class creates an `SQLite` table named `Bill` if it does not already exist. This table is used to store bill-related information, including attributes such as `number`, `date`, `tax`, `status`, and `customer`.
 
 <br>
 <be>
