@@ -1,7 +1,7 @@
 <img src="/Assets/0.png" height="80">
 
 # Onyx Delivery
-The app is designed to retrieve the order bills list from the backend API, then ensure saving it into the SQL database (with written SQL statements), after that, the app displays the cashed bills list in the table view that appears to the user (I managed to have one and only one source to display the data from.. *"Single source of truth"*).
+Onyx Delivery is designed to retrieve the order bills list from the backend API, then ensure saving it into the SQL database (with written SQL statements), after that, the app displays the cashed bills list in the table view that appears to the user (I managed to have one and only one source to display the data from.. *"Single source of truth"*).
 
 <br>
 <be>
