@@ -37,7 +37,7 @@ I've made some functions to `createTablesIfNeeded()`,
     }
 ```
 
-`upsertBills(bills: [Bill])`, `retrieveBills() -> [Bill]`, `private func removeAllBills()` in the [LocalDataSource](ios-onyx-delivery/Core/Local/SQL/LocalDataSource.swift) class.
+`upsertBills(bills: [Bill])`, `retrieveBills() -> [Bill]`, `removeAllBills()` in the [LocalDataSource](ios-onyx-delivery/Core/Local/SQL/LocalDataSource.swift) class.
 
 <br>
 <br>
