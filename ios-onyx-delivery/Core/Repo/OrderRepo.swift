@@ -21,7 +21,6 @@ class OrderRepo: Repo {
                 } else {
                     completion(.onFailure(APIError(type: .noData, message: Constants.noDataResponse)))
                 }
-                
             case let .onFailure(error):
                 completion(.onFailure(error))
             }
