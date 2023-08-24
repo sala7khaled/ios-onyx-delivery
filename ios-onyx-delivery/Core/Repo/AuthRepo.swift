@@ -27,5 +27,6 @@ class AuthRepo: Repo {
         let userDefaults = UserDefaults.standard
         userDefaults.set(user.data?.name, forKey: Constants.userInfoKey)
     }
+    
 
 }

@@ -38,7 +38,6 @@ class AppTextField: UITextField {
     private func configure() {
         layer.cornerRadius = Constants.defaultCornerRadius
         layer.backgroundColor = backColor
-        attributedPlaceholder
         layer.borderWidth = borderWidth
         layer.borderColor = borderColor
         clipsToBounds = true
