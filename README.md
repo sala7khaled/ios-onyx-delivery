@@ -21,15 +21,8 @@ Onyx Delivery is designed to retrieve the order bills list from the backend API,
 I've made some functions to `createTablesIfNeeded()`,
 ```swift
     private func createTablesIfNeeded() {
-        let createTableQuery = """
-            CREATE TABLE IF NOT EXISTS Bill (
-                number TEXT,
-                date TEXT,
-                tax TEXT,
-                status TEXT,
-                customer TEXT
-            );
-        """
+        let createTableQuery = "CREATE TABLE IF NOT EXISTS Bill (number TEXT,
+                                 date TEXT, tax TEXT, status TEXT, customer TEXT);"
 
         if sqlite3_exec(database, createTableQuery, nil, nil, nil) != SQLITE_OK {
             print("Error creating table")
